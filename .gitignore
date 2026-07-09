@@ -1,0 +1,8 @@
+.env
+__pycache__
+2.comparison.py
+3.CleanLoadingPipeline.py
+4.CleanAndFastLoadingPipeline.py
+5.RaisingQuery.py
+6.FullyModularWithLLM.py
+UsingHybridSearch.py
