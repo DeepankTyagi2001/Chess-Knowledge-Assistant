@@ -1,0 +1,5 @@
+1. Make the calls to extract text from all the documents asynchronous, along with embedding calls
+2. add Reranker
+3. add Query Expander
+4. add Multiple Query Generator
+5. add llm to clean the extracted text rather than regular expression (optional__later part)
