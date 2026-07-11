@@ -3,3 +3,7 @@
 3. add Query Expander
 4. add Multiple Query Generator
 5. add llm to clean the extracted text rather than regular expression (optional__later part)
+6. Do hybrid embedding
+7. Have an eval set
+8. Have a Proper Prompt for LLM to generate the final answer.
+9. Search based on set of moves Played (possible?)
