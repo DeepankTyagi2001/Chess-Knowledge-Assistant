@@ -1,4 +1,5 @@
 import os
+import asyncio
 from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
 
@@ -11,18 +12,21 @@ from LoadQuestion import load_questions
 
 FAISS_INDEX_PATH = "faiss_index_chess"
 
-def main():
+
+async def main():
     questions = load_questions("queries_list.txt")
 
     embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
     if os.path.exists(FAISS_INDEX_PATH):
         print("Loading existing FAISS index from disk...")
-        vectorstore = FAISS.load_local(FAISS_INDEX_PATH, embeddings, allow_dangerous_deserialization=True)
+        vectorstore = FAISS.load_local(
+            FAISS_INDEX_PATH, embeddings, allow_dangerous_deserialization=True
+        )
     else:
         print("No existing index found. Building new FAISS index...")
-        all_docs = load_data()
+        all_docs = load_data()              # now async
         langchain_docs = chunker(all_docs)
-        vectorstore = embedder(langchain_docs)
+        vectorstore = await embedder(langchain_docs)  # now async
         vectorstore.save_local(FAISS_INDEX_PATH)
         print(f"Saved new index to {FAISS_INDEX_PATH}")
 
@@ -30,9 +34,9 @@ def main():
         print(f"Running question {i}: {query}")
         print("--" * 75)
         context = query_search(vectorstore, query)
-        answer = call_llm(query, context)
-        print(answer)
+        print(call_llm(query, context))
         print("**" * 75)
 
-if __name__=="__main__":
-  main()
+
+if __name__ == "__main__":
+    asyncio.run(main())
