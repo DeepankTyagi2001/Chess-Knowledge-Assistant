@@ -10,6 +10,16 @@ from Query_Search import query_search
 from call_llm import call_llm
 from LoadQuestion import load_questions
 
+from QueryExpander import generate_query_variants
+from Query_Search import multi_query_search
+from Reranker import rerank
+
+def retrieve(vectorstore, query, k_per_query=5, final_k=3):
+    variants = generate_query_variants(query, n=3)
+    candidates = multi_query_search(vectorstore, variants, k_per_query=k_per_query)
+    final_chunks = rerank(query, candidates, top_k=final_k)  # rerank against ORIGINAL query
+    return final_chunks
+
 FAISS_INDEX_PATH = "faiss_index_chess"
 
 
@@ -33,7 +43,7 @@ async def main():
     for i, query in enumerate(questions, start=1):
         print(f"Running question {i}: {query}")
         print("--" * 75)
-        context = query_search(vectorstore, query)
+        context = retrieve(vectorstore, query)
         print(call_llm(query, context))
         print("**" * 75)
 
