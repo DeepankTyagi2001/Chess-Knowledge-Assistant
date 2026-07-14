@@ -30,6 +30,8 @@
 import pymupdf4llm
 import os
 import re
+import asyncio
+from concurrent.futures import ProcessPoolExecutor
 from dotenv import find_dotenv, load_dotenv
 
 load_dotenv(find_dotenv())
