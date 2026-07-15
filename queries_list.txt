@@ -3,7 +3,7 @@
 3. What decides a key moment in a game?
 4. What are the principle of single diagonal?
 5. Give the content provided in the document for coordination of the attacking pieces.
-6. Explain the cont of exchanging a good defensive piece.
+6. Explain the content of exchanging a good defensive piece.
 7. If you scored less than certain points after each chapter, what do we have to do?
 8. The light-squared bishop is a particularly important piece here. Some typical ideas are: 
 9. Explain The Reti Opening througth the content present in the document.
@@ -12,7 +12,7 @@
 12. Why would you say that "Chess is Extremely Logical"?
 13. What's an "Opening" in chess?
 14. A "Gambit" in chess was first used by?
-15. what does "castles by hands" means?
+15. what does "castles by hand" means?
 16. what's an Austrian Attack?
 17. The defense appeals to which kind of players?
 18. What do you know about "en-passant"?
