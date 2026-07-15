@@ -1,9 +1,9 @@
-1. Make the calls to extract text from all the documents asynchronous, along with embedding calls
-2. add Reranker
-3. add Query Expander
-4. add Multiple Query Generator
+1. Make the calls to extract text from all the documents asynchronous, along with embedding calls [DONE, but CPU tasks were taking too much time and memory so left as is]
+2. add Reranker [DONE]
+3. add Query Expander [DONE]
+4. add Multiple Query Generator [DONE]
 5. add llm to clean the extracted text rather than regular expression (optional__later part)
-6. Do hybrid embedding
-7. Have an eval set
-8. Have a Proper Prompt for LLM to generate the final answer.
-9. Search based on set of moves Played (possible?)
+6. Do hybrid embedding [DONE]
+7. Have an eval set  [Paritally DONE]
+8. Have a Proper Prompt for LLM to generate the final answer. [DONE]
+9. Search based on set of moves Played (possible?) 
