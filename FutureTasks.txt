@@ -13,3 +13,4 @@
 13. Add source citations to answers
 14. Make a proper interface
 15. Deploy it somewhere with a live link.
+16. better way to read chessboard game images?
