@@ -7,3 +7,9 @@
 7. Have an eval set  [Paritally DONE]
 8. Have a Proper Prompt for LLM to generate the final answer. [DONE]
 9. Search based on set of moves Played (possible?) 
+10. Do an Ablation Study
+11. Perform proper eval analysis (hybird, semantic, keywords)
+12. Track cost and Latency
+13. Add source citations to answers
+14. Make a proper interface
+15. Deploy it somewhere with a live link.
